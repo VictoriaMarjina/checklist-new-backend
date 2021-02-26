@@ -57,7 +57,7 @@ const logIn = async data => {
 }
 
 const getTasks = async data => {
-    const response = await fetch('http://185.129.2.58:8997/v2/getMyNewTasksById.php', {
+    const response = await fetch('http://185.129.2.58:8997/v2/getMyOwnTasks.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
