@@ -52,8 +52,29 @@ class App {
     }
 
     onGetTasks = async (req, res) => {
-        const data = await api.getTasks(req.body);
-
+        //const data = await api.getTasks(req.body);
+        const data = {
+                "Task": [
+                    {
+                        "checklist_id": 540,
+                        "responsible_token": "1ae22e526fbf0a2fb6e670f4c5c76b1f",
+                        "full_name": "Sabina Shamilova",
+                        "status_id": 0,
+                        "description": "Спасибо за бууулошки",
+                        "dead_line": "2020-12-11"
+                    },
+                    {
+                        "checklist_id": 537,
+                        "responsible_token": "1e584a9c0eb8b4a18fcf54de826bbe1e",
+                        "full_name": "Sabina Shamilova",
+                        "status_id": 1,
+                        "description": "Интересная была партия в шахматы)",
+                        "dead_line": "2020-12-10"
+                    }
+                ],
+                "SubTask": []
+            }
+            
         res.json(data);
         res.end();
     }
